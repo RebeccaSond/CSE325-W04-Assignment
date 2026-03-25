@@ -3,6 +3,11 @@ namespace ConnectFour;
 public class GameState
 {
 
+    // Added Player1Wins, Player2Wins, and GameOver to keep track of wins
+    public int Player1Wins { get; private set; } = 0;
+    public int Player2Wins { get; private set; } = 0;
+    public bool GameOver { get; private set; } = false;
+
     static GameState()
     {
         CalculateWinningPlaces();
@@ -125,28 +130,33 @@ public class GameState
     /// <returns>0 - no winner, 1 - player 1 wins, 2 - player 2 wins, 3 - draw</returns>
     public WinState CheckForWin()
     {
-
-        // Exit immediately if less than 7 pieces are played
         if (TheBoard.Count(x => x != 0) < 7) return WinState.No_Winner;
 
         foreach (var scenario in WinningPlaces)
         {
+            int first = TheBoard[scenario[0]];
+            if (first == 0) continue;
 
-            if (TheBoard[scenario[0]] == 0) continue;
+            if (first == TheBoard[scenario[1]] &&
+                first == TheBoard[scenario[2]] &&
+                first == TheBoard[scenario[3]])
+            {
+                // Added this to check if game is over or not to prevent errors
+                if (!GameOver)
+                {
+                    if (first == 1) Player1Wins++;
+                    else if (first == 2) Player2Wins++;
+                    GameOver = true;
+                }
 
-            if (TheBoard[scenario[0]] ==
-                TheBoard[scenario[1]] &&
-                TheBoard[scenario[1]] ==
-                TheBoard[scenario[2]] &&
-                TheBoard[scenario[2]] ==
-                TheBoard[scenario[3]]) return (WinState)TheBoard[scenario[0]];
-
+                return (WinState)first;
+            }
         }
 
+        // Check for tie
         if (TheBoard.Count(x => x != 0) == 42) return WinState.Tie;
 
         return WinState.No_Winner;
-
     }
 
     /// <summary>
@@ -182,6 +192,7 @@ public class GameState
     public void ResetBoard()
     {
         TheBoard = new List<int>(new int[42]);
+        GameOver = false; // Added this to make sure game resets properly
     }
 
     private byte ConvertLandingSpotToRow(int landingSpot)

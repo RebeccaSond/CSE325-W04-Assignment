@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\COnnectFour\\ConnectFour.csproj": {}
+    "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\ConnectFour\\ConnectFour.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\COnnectFour\\ConnectFour.csproj": {
+    "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\ConnectFour\\ConnectFour.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\COnnectFour\\ConnectFour.csproj",
+        "projectUniqueName": "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\ConnectFour\\ConnectFour.csproj",
         "projectName": "ConnectFour",
-        "projectPath": "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\COnnectFour\\ConnectFour.csproj",
+        "projectPath": "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\ConnectFour\\ConnectFour.csproj",
         "packagesPath": "C:\\Users\\hanna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\COnnectFour\\obj\\",
+        "outputPath": "C:\\Users\\hanna\\OneDrive\\Desktop\\BYU-Coding\\projects\\CSE325-W04-Assignment\\ConnectFour\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hanna\\AppData\\Roaming\\NuGet\\NuGet.Config"
